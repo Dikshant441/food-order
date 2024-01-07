@@ -21,7 +21,7 @@ Body
 
 
 
-# React concept that use for create appliaction
+# React and js concept that use for create appliaction
 
 - install packages for applications
     - npm init
@@ -36,9 +36,26 @@ Body
 - Props (js)
 - what is config driven UI
 - optional chaining (JS)
-- map reduce filter 
+- map reduce
+    - key (1) unique
+          (2) index
+- Filter
+- onclick ---> handler
 - import/export
     - by default
     - by named
+- Monolith and Microservices architecture
+- HOOKs
+    - usestate Hook
+        - state variable
+        - Reconicilation Algo( React Fiber )
+        - virtual Dom
+        - Diff Algo
+    - useEffect
+        - async await
+        - fetch(power given by js engine) API and converty into json
 
-    
+- CORS crome extension
+- Shimmer UI
+- Conditional Rendering (with ternary operator or conditional operator)
+- onChange  ---> Handler
