@@ -59,3 +59,20 @@ Body
 - Shimmer UI
 - Conditional Rendering (with ternary operator or conditional operator)
 - onChange  ---> Handler
+
+- Routing
+   - npm install react-router-dom
+   - createBrowseRouter
+   - RouterProider
+   - React error page
+        - errorElement
+        - useRouteError Hook
+        - children route
+            - outlet
+    - types of routing
+        - Client site routing
+        - Server site routing
+    - Dynamic routing
+        - use id 
+    - useParam HOOk
+

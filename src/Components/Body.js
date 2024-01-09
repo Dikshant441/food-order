@@ -1,11 +1,12 @@
 import RetaurantCard from "./Restaurant";
 import { useEffect, useState } from "react";
 import ShimmerUI from "./ShimmerUI";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listofRestaurants, setListofRestaurants] = useState([]);
 
-  const [ filteredRestaurant, setFilteredRestaurant ] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   const [searchText, setSearchText] = useState("");
 
@@ -24,7 +25,9 @@ const Body = () => {
     setListofRestaurants(
       json.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    setFilteredRestaurant(json.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredRestaurants(
+      json.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   return listofRestaurants.length === 0 ? (
@@ -46,22 +49,25 @@ const Body = () => {
               //  filter the restaurants and update the ui
               // searchTYext
               // console.log(searchText);
-              const filteredRestaurant = listofRestaurants.filter(
-                (ram)=> ram?.info?.name?.toLowerCase().includes(searchText.toLowerCase())
+              const filteredRestaurant = listofRestaurants.filter((res) =>
+                res?.info?.name
+                  .toLowerCase()
+                  ?.includes(searchText.toLowerCase())
               );
-              setFilteredRestaurant(filteredRestaurant);
+              setFilteredRestaurants(filteredRestaurant);
             }}
           >
             Search
           </button>
         </div>
+
         <button
           className="filter-btn"
           onClick={() => {
             const filteredList = listofRestaurants.filter(
               (res) => res?.info?.avgRating > 4.3
             );
-            setListofRestaurants(filteredList);
+            setFilteredRestaurants(filteredList);
           }}
         >
           Top Rated Restaurants
@@ -69,8 +75,13 @@ const Body = () => {
       </div>
 
       <div className="res-container">
-        {filteredRestaurant.map((restaurant) => (
-          <RetaurantCard key={restaurant?.info?.id} resData={restaurant} />
+        {filteredRestaurants.map((restaurant) => (
+          <Link
+            key={restaurant?.info?.id}
+            to={"restaurant/" + restaurant?.info?.id}
+          >
+            <RetaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>
