@@ -36,7 +36,7 @@ Body
 - Props (js)
 - what is config driven UI
 - optional chaining (JS)
-- map reduce
+- map reduce (list and key)
     - key (1) unique
           (2) index
 - Filter
@@ -75,4 +75,7 @@ Body
     - Dynamic routing
         - use id 
     - useParam HOOk
+
+- custom HOOk
+
 
