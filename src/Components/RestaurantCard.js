@@ -1,23 +1,23 @@
 import { CDN_URL } from "../utils/constants";
 
 
-const RetaurantCard = (props) => {
+const RestaurantCard = (props) => {
   const { resData } = props;
   const { cloudinaryImageId, name, costForTwo, cuisines, avgRating } = resData?.info;
   return (
-    <div className="res-card">
+    <div className="w-72 p-3 m-4 shadow-lg bg-rose-100 hover:bg-rose-200 h-80 hover:border-black text-left">
       <img
-        className="res-logo"
+        className="h-48 w-full"
         alt="res-logo"
         src={ CDN_URL + cloudinaryImageId
         }
       />
-      <h3>{name}</h3>
+      <h3 className="font-bold text-xl line-clamp-1" >{name}</h3>  
+      <p className="line-clamp-1" >{cuisines.join(", ")}</p>
       <h4>{costForTwo}</h4>
-      <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating} star</h4>
     </div>
   );
 }; 
 
-  export default RetaurantCard;
+  export default RestaurantCard;
