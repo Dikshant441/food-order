@@ -122,7 +122,9 @@
     - Action/reducers
     - useSelector
     - useDispatch
-- Redux Dev Toolkit
+- Redux Dev Tool
+    - Component structure
+    - Profiler 
 
 - React Testing Library
     - jest

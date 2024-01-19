@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { WithOpenLabel } from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
@@ -11,7 +11,9 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  // console.log("bodyrender");
+  console.log("bodyrender", listofRestaurants);
+
+  const RestaurantCardOpen = WithOpenLabel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -32,11 +34,11 @@ const Body = () => {
   };
 
   const onlineStatus = useOnlineStatus();
-  if(onlineStatus === false){
+  if (onlineStatus === false) {
     return (
       <h1>Looks like you're offline!! Please check your internet connection</h1>
-    )
-  };
+    );
+  }
 
   return listofRestaurants.length === undefined ? (
     <ShimmerUI />
@@ -53,7 +55,7 @@ const Body = () => {
             }}
           />
           <button
-          className="p-2 m-2 bg-red-500 hover:bg-red-800 text-white rounded-md "
+            className="p-2 m-2 bg-red-500 hover:bg-red-800 text-white rounded-md "
             onClick={() => {
               //  filter the restaurants and update the ui
               // searchTYext
@@ -89,7 +91,11 @@ const Body = () => {
             key={restaurant?.info?.id}
             to={"restaurant/" + restaurant?.info?.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant?.info?.isOpen ? (
+              <RestaurantCardOpen resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
