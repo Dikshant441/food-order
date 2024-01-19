@@ -11,7 +11,7 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  console.log("bodyrender", listofRestaurants);
+  // console.log("bodyrender", listofRestaurants);
 
   const RestaurantCardOpen = WithOpenLabel(RestaurantCard);
 

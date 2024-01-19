@@ -112,6 +112,9 @@
 
 - High order Component
 - Controlled and uncontrolled Component
+- React Dev Tool
+    - Component structure
+    - Profiler 
 - Lifting the State up 
 - Props Drilling
 - React Context
@@ -123,8 +126,7 @@
     - useSelector
     - useDispatch
 - Redux Dev Tool
-    - Component structure
-    - Profiler 
+
 
 - React Testing Library
     - jest
