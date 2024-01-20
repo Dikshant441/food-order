@@ -4,7 +4,7 @@ import Header from "./Components/Header";
 import Body from "./Components/Body";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./Components/About";
-import Contact from "./Components/Contact";
+import Faq from "./Components/Faq";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
 import { Provider } from "react-redux";
@@ -38,8 +38,8 @@ const appRoute = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/contact",
-        element: <Contact />,
+        path: "/faq",
+        element: <Faq />,
       },
       {
         path: "/grocery",

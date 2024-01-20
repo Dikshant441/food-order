@@ -25,10 +25,10 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
-            <Link to="/about">About</Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
-            <Link to="/contact">Contact</Link>
+            <Link to="/faq">FAQ</Link>
           </li>
           <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
             <Link to="/grocery">Grocery</Link>
