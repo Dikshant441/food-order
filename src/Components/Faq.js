@@ -1,7 +1,7 @@
 
 const Faq = () => {
   return (
-    <div>
+    <div className=" py-36 px-48" >
         <h1>Frequently asked question </h1>
       
     </div>
