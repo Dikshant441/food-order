@@ -15,7 +15,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="text-center m-4 p-4">
+    <div className="py-36 px-48 text-center m-4 p-4">
       <h1 className="text-2xl font-bold">Cart</h1>
       <div className="w-6/12 m-auto">
         <button

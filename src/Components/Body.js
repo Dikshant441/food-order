@@ -43,12 +43,12 @@ const Body = () => {
   return listofRestaurants.length === undefined ? (
     <ShimmerUI />
   ) : (
-    <div className="p-5 bg-pink-50 text-center">
+    <div className="absolute py-36 px-48">
       <div className="flex">
         <div className="search">
           <input
             type="text"
-            className="focus:bg-rose-200 p-2 m-2 w-96"
+            className=" border-solid border-2 border-black bg-rose-100 rounded-2xl  focus:bg-rose-200 p-2 m-2 w-96"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -82,6 +82,17 @@ const Body = () => {
           }}
         >
           Top Rated Restaurants
+        </button>
+        <button
+          className="p-2 m-2 bg-red-500 hover:bg-red-800 text-white rounded-md "
+          onClick={() => {
+            const filteredRestaurant = listofRestaurants.filter(
+              (res) => res?.info?.name
+            );
+            setFilteredRestaurants(filteredRestaurant);
+          }}
+        >
+          Reset...
         </button>
       </div>
 

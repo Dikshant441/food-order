@@ -12,32 +12,33 @@ const Header = () => {
   // console.log(cartItems);
 
   return (
-    <div className="flex justify-between bg-red-500 shadow-lg">
-      <div className="logo-container">
+    <div className="flex justify-between bg-white shadow-lg fixed top-0 w-full z-[1] ">
+      <div className="flex">
         <img className="h-28 p-2" src={LOGO_URL} />
+        <span  className=" m-2 py-6 logo-container flex text-gray-900 font-bold text-4xl italic">Swad Safarii...</span>
       </div>
       <div className="py-11">
         <ul className="flex">
-          <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
+          <li className="px-2 text-gray-800 text-xl font-semibold hover:text-orange-500">
             Online status: {onlineStatus ? "✅" : "🔴"}
           </li>
-          <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
+          <li className="px-2 text-gray-800 text-xl font-semibold hover:text-orange-500">
             <Link to="/">Home</Link>
           </li>
-          <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
+          <li className="px-2 text-gray-800 text-xl font-semibold hover:text-orange-500">
             <Link to="/about">About Us</Link>
           </li>
-          <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
+          <li className="px-2 text-gray-800 text-xl font-semibold hover:text-orange-500">
             <Link to="/faq">FAQ</Link>
           </li>
-          <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
+          <li className="px-2 text-gray-800 text-xl font-semibold hover:text-orange-500">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="px-2 text-white hover:text-black hover:bg-white rounded-2xl">
+          <li className="px-2 text-gray-800 text-xl font-semibold hover:text-orange-500">
             <Link to="/cart">Cart-({cartItems.length} Items)</Link>
           </li>
           <button
-            className="px-2 text-white hover:text-black hover:bg-white rounded-2xl"
+            className="px-2 text-gray-800 text-xl font-semibold hover:text-orange-500"
             onClick={() => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}
