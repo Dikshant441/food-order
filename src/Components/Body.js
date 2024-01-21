@@ -24,7 +24,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    // console.log(json); to see api data in console
+    console.log(json);
     setListofRestaurants(
       json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -43,19 +43,20 @@ const Body = () => {
   return listofRestaurants.length === undefined ? (
     <ShimmerUI />
   ) : (
-    <div className="absolute py-36 px-48">
+    <div className="absolute py-32 px-48">
       <div className="flex">
         <div className="search">
           <input
             type="text"
-            className=" border-solid border-2 border-black bg-rose-100 rounded-2xl  focus:bg-rose-200 p-2 m-2 w-96"
+            className=" border-solid border-2 border-gray-500 bg- rounded-2xl  p-2 m-2 w-96 font-medium"
+            placeholder="Type Restaurant Name ...."
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="p-2 m-2 bg-red-500 hover:bg-red-800 text-white rounded-md "
+            className="p-2 m-2 border-solid border-2 border-gray-500 bg-white  text-orange-600 rounded-md font-medium hover:bg-orange-400 hover:text-white"
             onClick={() => {
               //  filter the restaurants and update the ui
               // searchTYext
@@ -73,7 +74,7 @@ const Body = () => {
         </div>
 
         <button
-          className="p-2 m-2 bg-red-500 hover:bg-red-800 text-white rounded-md "
+          className="p-2 m-2 border-solid border-2 border-gray-500 bg-white  text-orange-600 rounded-md font-medium hover:bg-orange-400 hover:text-white"
           onClick={() => {
             const filteredList = listofRestaurants.filter(
               (res) => res?.info?.avgRating > 4.3
@@ -84,7 +85,7 @@ const Body = () => {
           Top Rated Restaurants
         </button>
         <button
-          className="p-2 m-2 bg-red-500 hover:bg-red-800 text-white rounded-md "
+          className="p-2 m-2 border-solid border-2 border-gray-500 bg-white  text-orange-600 rounded-md font-medium hover:bg-orange-400 hover:text-white "
           onClick={() => {
             const filteredRestaurant = listofRestaurants.filter(
               (res) => res?.info?.name
@@ -96,7 +97,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-center bg-pink-50">
+      <div className="flex flex-wrap my-3 justify-center bg-pink-50">
         {filteredRestaurants.map((restaurant) => (
           <Link
             key={restaurant?.info?.id}

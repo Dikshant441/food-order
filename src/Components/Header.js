@@ -12,10 +12,12 @@ const Header = () => {
   // console.log(cartItems);
 
   return (
-    <div className="flex justify-between bg-white shadow-lg fixed top-0 w-full z-[1] ">
+    <div className="flex justify-between bg-white shadow-lg fixed top-0 w-full z-[1] h-24 ">
       <div className="flex">
-        <img className="h-28 p-2" src={LOGO_URL} />
-        <span  className=" m-2 py-6 logo-container flex text-gray-900 font-bold text-4xl italic">Swad Safarii...</span>
+        <img className="h-24 p-2" src={LOGO_URL} />
+        <span className="m-2 py-6 logo-container flex text-orange-500 drop-shadow-md md:drop-shadow-xl font-bold text-4xl italic">
+          Swad Safarii...
+        </span>
       </div>
       <div className="py-11">
         <ul className="flex">
