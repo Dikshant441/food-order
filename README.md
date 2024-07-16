@@ -139,6 +139,8 @@
     - Install Babel dependencies
     - configure babel
     - configure parcel config file to disable default babel transpilation
+    - jest config - npx jest --init
+    - install jsdom library
 
 
 
