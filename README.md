@@ -128,10 +128,17 @@
 - Redux Dev Tool
 
 
-- React Testing Library
-    - jest
-        - Unit Testing
-        - Intregation Testing
+- Type of testing
+    - Unit Testing
+    - Intregation Testing
+
+
+- React Testing Library  + Jest
+    - install RTL
+    - install Jest
+    - Install Babel dependencies
+    - configure babel
+    - configure parcel config file to disable default babel transpilation
 
 
 

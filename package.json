@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Dikshant441/food-order.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "Dikshant singh",
   "license": "ISC",
@@ -19,8 +20,15 @@
   },
   "homepage": "https://github.com/Dikshant441/food-order#readme",
   "devDependencies": {
+    "@babel/core": "^7.24.9",
+    "@babel/preset-env": "^7.24.8",
+    "@testing-library/dom": "^10.3.2",
+    "@testing-library/react": "^16.0.0",
     "autoprefixer": "^10.4.16",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
     "parcel": "^2.11.0",
+    "parcel-bundler": "^1.12.5",
     "postcss": "^8.4.33",
     "process": "^0.11.10",
     "tailwind": "^4.0.0",
